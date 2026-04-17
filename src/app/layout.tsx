@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald", weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Manfred Hermanns Bauunternehmung – Bauunternehmen Schleiden | Kreis Euskirchen",
@@ -40,7 +40,7 @@ const schema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="de" className={`${inter.variable} ${oswald.variable}`}>
       <head>
         <script
           type="application/ld+json"

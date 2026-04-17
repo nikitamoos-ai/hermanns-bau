@@ -27,12 +27,12 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="text-[#d4900a] font-semibold uppercase tracking-widest text-sm">
+          <span className="text-[#c8830a] font-semibold uppercase tracking-widest text-sm">
             Sprechen wir
           </span>
           <h2
-            className="text-3xl sm:text-4xl font-bold text-[#2c2c2c] mt-2"
-            style={{ fontFamily: "var(--font-playfair, serif)" }}
+            className="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mt-2"
+            style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
           >
             Kontakt & Öffnungszeiten
           </h2>
@@ -59,26 +59,26 @@ export default function Contact() {
                   <div className="text-2xl mb-2">{c.icon}</div>
                   <div className="text-xs text-gray-400 uppercase tracking-wide mb-1">{c.label}</div>
                   {c.href ? (
-                    <a href={c.href} className="font-semibold text-[#2c2c2c] hover:text-[#d4900a] transition-colors text-sm">
+                    <a href={c.href} className="font-semibold text-[#1a1a1a] hover:text-[#c8830a] transition-colors text-sm">
                       {c.value}
                     </a>
                   ) : (
-                    <p className="font-semibold text-[#2c2c2c] text-sm whitespace-pre-line">{c.value}</p>
+                    <p className="font-semibold text-[#1a1a1a] text-sm whitespace-pre-line">{c.value}</p>
                   )}
                 </div>
               ))}
             </div>
 
             {/* Hours */}
-            <div className="bg-[#2c2c2c] rounded-xl p-6 text-white">
-              <h3 className="font-bold text-lg mb-4" style={{ fontFamily: "var(--font-playfair, serif)" }}>
+            <div className="bg-[#1a1a1a] rounded-xl p-6 text-white">
+              <h3 className="font-bold text-lg mb-4" style={{ fontFamily: "var(--font-oswald, sans-serif)" }}>
                 Öffnungszeiten
               </h3>
               <div className="space-y-3">
                 {hours.map((h) => (
                   <div key={h.day} className="flex justify-between items-center border-b border-gray-700 pb-2 last:border-0 last:pb-0">
                     <span className="text-gray-300 text-sm">{h.day}</span>
-                    <span className="text-[#d4900a] font-semibold text-sm">{h.time}</span>
+                    <span className="text-[#c8830a] font-semibold text-sm">{h.time}</span>
                   </div>
                 ))}
               </div>
@@ -107,13 +107,13 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-bold text-[#2c2c2c] mb-6" style={{ fontFamily: "var(--font-playfair, serif)" }}>
+              <h3 className="text-xl font-bold text-[#1a1a1a] mb-6" style={{ fontFamily: "var(--font-oswald, sans-serif)" }}>
                 Kostenloses Angebot anfordern
               </h3>
               {sent ? (
                 <div className="text-center py-12">
                   <div className="text-5xl mb-4">✅</div>
-                  <p className="text-[#2c2c2c] font-semibold">Nachricht gesendet!</p>
+                  <p className="text-[#1a1a1a] font-semibold">Nachricht gesendet!</p>
                   <p className="text-gray-500 text-sm mt-2">Wir melden uns so schnell wie möglich bei Ihnen.</p>
                 </div>
               ) : (
@@ -133,7 +133,7 @@ export default function Contact() {
                         placeholder={f.placeholder}
                         value={form[f.id as keyof typeof form]}
                         onChange={(e) => setForm({ ...form, [f.id]: e.target.value })}
-                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#d4900a] focus:border-transparent"
+                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#c8830a] focus:border-transparent"
                         required={f.label.includes("*")}
                       />
                     </div>
@@ -148,13 +148,13 @@ export default function Contact() {
                       placeholder="Beschreiben Sie kurz Ihr Bauprojekt..."
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#d4900a] focus:border-transparent resize-none"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#c8830a] focus:border-transparent resize-none"
                       required
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-[#d4900a] hover:bg-[#b87a08] text-white font-semibold py-3 rounded-lg transition-colors text-sm"
+                    className="w-full bg-[#c8830a] hover:bg-[#b87a08] text-white font-semibold py-3 rounded-lg transition-colors text-sm"
                   >
                     Anfrage absenden →
                   </button>

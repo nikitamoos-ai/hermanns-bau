@@ -4,8 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+    <section className="relative min-h-screen flex items-end overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero.jpg"
@@ -14,80 +13,71 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#2c2c2c]/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/60 to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8 }}
         >
-          {/* Trust badge */}
-          <div className="inline-flex items-center gap-2 bg-[#d4900a]/20 border border-[#d4900a]/50 rounded-full px-4 py-1.5 mb-6 text-sm text-[#d4900a] font-medium">
-            <span>⭐⭐⭐⭐⭐</span>
+          <div className="inline-flex items-center gap-2 bg-[#c8830a] px-4 py-1.5 mb-6 text-sm text-white font-semibold uppercase tracking-widest">
             <span>Meisterbetrieb · Seit 2010 in der Eifel</span>
           </div>
 
           <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4"
-            style={{ fontFamily: "var(--font-playfair, serif)" }}
+            className="text-5xl sm:text-6xl lg:text-8xl font-bold leading-none text-white uppercase tracking-tight mb-6"
+            style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
           >
-            Ihr zuverlässiges
+            Wir bauen.
             <br />
-            <span className="text-[#d4900a]">Bauunternehmen</span>
+            <span className="text-[#c8830a]">Solide.</span>
             <br />
-            in der Eifel
+            Verlässlich.
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Kompetent, flexibel und kundennah – Manfred Hermanns Bauunternehmung GmbH
-            realisiert Ihr Bauprojekt in Schleiden und der gesamten Region Kreis Euskirchen.
+          <p className="text-lg text-gray-300 max-w-xl mb-10 leading-relaxed">
+            Manfred Hermanns Bauunternehmung GmbH – Ihr regionaler Partner für Mauerwerk,
+            Sanierung und Erdarbeiten im Kreis Euskirchen.
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <a
               href="tel:024851246"
-              className="bg-[#d4900a] hover:bg-[#b87a08] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg"
+              className="bg-[#c8830a] hover:bg-[#a86c08] text-white font-bold px-8 py-4 text-lg uppercase tracking-wide transition-colors"
+              style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
             >
-              📞 02485 / 1246 – Jetzt anrufen
+              02485 / 1246 – Anrufen
             </a>
             <a
               href="#leistungen"
-              className="border-2 border-white hover:bg-white hover:text-[#2c2c2c] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+              className="border-2 border-white/50 hover:border-white text-white font-bold px-8 py-4 text-lg uppercase tracking-wide transition-colors"
+              style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
             >
               Unsere Leistungen
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 max-w-xl mx-auto">
+          <div className="flex flex-wrap gap-8">
             {[
               { value: "14+", label: "Jahre Erfahrung" },
               { value: "500+", label: "Projekte" },
-              { value: "100%", label: "Meisterbetrieb" },
+              { value: "GmbH", label: "Meisterbetrieb" },
             ].map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-[#d4900a]">{s.value}</div>
-                <div className="text-xs sm:text-sm text-gray-300 mt-1">{s.label}</div>
+              <div key={s.label} className="border-l-2 border-[#c8830a] pl-4">
+                <div
+                  className="text-3xl font-bold text-white"
+                  style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
+                >
+                  {s.value}
+                </div>
+                <div className="text-xs text-gray-400 uppercase tracking-widest mt-0.5">{s.label}</div>
               </div>
             ))}
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5 }}
-      >
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-white/70 rounded-full" />
-        </div>
-      </motion.div>
     </section>
   );
 }

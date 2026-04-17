@@ -3,84 +3,91 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const facts = [
-  { value: "2010", label: "Gründungsjahr" },
-  { value: "GmbH", label: "Rechtsform" },
+  { value: "2010", label: "Gegründet" },
+  { value: "GmbH", label: "Meisterbetrieb" },
   { value: "Eifel", label: "Heimatregion" },
-  { value: "HRB 5841", label: "Handelsregister Düren" },
+  { value: "HRB 5841", label: "Handelsregister" },
 ];
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
 
 export default function About() {
   return (
-    <section id="ueber-uns" className="py-20 bg-white">
+    <section id="ueber-uns" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            variants={fadeUp}
+            transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative h-80 sm:h-96 lg:h-[480px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative h-96 lg:h-[520px] overflow-hidden">
               <Image
                 src="/images/about.jpg"
-                alt="Manfred Hermanns Bauunternehmung Team"
+                alt="Manfred Hermanns Bauunternehmung"
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-[#1a1a1a]/20" />
             </div>
-            {/* Accent badge */}
-            <div className="absolute -bottom-5 -right-5 bg-[#d4900a] text-white rounded-xl px-6 py-4 shadow-lg text-center">
-              <div className="text-3xl font-bold">14+</div>
-              <div className="text-xs uppercase tracking-wide">Jahre Erfahrung</div>
+            <div className="absolute -bottom-0 -right-0 bg-[#c8830a] text-white px-8 py-6 text-center">
+              <div
+                className="text-5xl font-bold leading-none"
+                style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
+              >
+                14+
+              </div>
+              <div className="text-xs uppercase tracking-widest mt-1">Jahre Erfahrung</div>
             </div>
           </motion.div>
 
-          {/* Text */}
           <motion.div
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            variants={{ ...fadeUp, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.15 } } }}
+            transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <span className="text-[#d4900a] font-semibold uppercase tracking-widest text-sm">
+            <span
+              className="text-[#c8830a] font-bold uppercase tracking-widest text-sm"
+              style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
+            >
               Über uns
             </span>
             <h2
-              className="text-3xl sm:text-4xl font-bold text-[#2c2c2c] mt-2 mb-6"
-              style={{ fontFamily: "var(--font-playfair, serif)" }}
+              className="text-4xl sm:text-5xl font-bold text-[#1a1a1a] mt-2 mb-4 uppercase leading-tight"
+              style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
             >
-              Handwerk mit Herz –
+              Handwerk,
               <br />
-              verwurzelt in der Eifel
+              das hält was
+              <br />
+              <span className="text-[#c8830a]">es verspricht.</span>
             </h2>
+            <div className="w-16 h-1 bg-[#c8830a] mb-6" />
             <p className="text-gray-600 leading-relaxed mb-4">
               Die Manfred Hermanns Bauunternehmung GmbH steht für bodenständiges Handwerk,
               das hält was es verspricht. Seit der Gründung 2010 realisieren wir Bauprojekte
               in Schleiden-Harperscheid und der gesamten Region Kreis Euskirchen – von der
               kleinen Sanierung bis zum Neubau.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <p className="text-gray-600 leading-relaxed mb-10">
               Als Handwerksbetrieb der alten Schule beraten wir Sie fair und ehrlich.
-              Wir denken stets im Sinne des Kunden – auch wenn das manchmal bedeutet,
-              einen kleineren Auftrag anzunehmen. Vertrauen ist unser wichtigstes Baumaterial.
+              Vertrauen ist unser wichtigstes Baumaterial.
             </p>
 
-            {/* Facts grid */}
             <div className="grid grid-cols-2 gap-4">
               {facts.map((f) => (
                 <div
                   key={f.label}
-                  className="bg-[#f5f5f5] rounded-xl p-4 border-l-4 border-[#d4900a]"
+                  className="border-l-4 border-[#c8830a] bg-[#f0ede8] px-4 py-4"
                 >
-                  <div className="text-xl font-bold text-[#2c2c2c]">{f.value}</div>
-                  <div className="text-xs text-gray-500 mt-0.5">{f.label}</div>
+                  <div
+                    className="text-2xl font-bold text-[#1a1a1a]"
+                    style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
+                  >
+                    {f.value}
+                  </div>
+                  <div className="text-xs text-gray-500 uppercase tracking-wide mt-0.5">{f.label}</div>
                 </div>
               ))}
             </div>
