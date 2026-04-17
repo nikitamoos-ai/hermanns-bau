@@ -28,9 +28,9 @@ export default function About() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[#1a1a1a]/20" />
+              <div className="absolute inset-0 bg-[#1a3a8a]/20" />
             </div>
-            <div className="absolute -bottom-0 -right-0 bg-[#c8830a] text-white px-8 py-6 text-center">
+            <div className="absolute -bottom-0 -right-0 bg-[#cc2020] text-white px-8 py-6 text-center">
               <div
                 className="text-5xl font-bold leading-none"
                 style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
@@ -48,22 +48,22 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <span
-              className="text-[#c8830a] font-bold uppercase tracking-widest text-sm"
+              className="text-[#cc2020] font-bold uppercase tracking-widest text-sm"
               style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
             >
               Über uns
             </span>
             <h2
-              className="text-4xl sm:text-5xl font-bold text-[#1a1a1a] mt-2 mb-4 uppercase leading-tight"
+              className="text-4xl sm:text-5xl font-bold text-[#1a3a8a] mt-2 mb-4 uppercase leading-tight"
               style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
             >
               Handwerk,
               <br />
               das hält was
               <br />
-              <span className="text-[#c8830a]">es verspricht.</span>
+              <span className="text-[#cc2020]">es verspricht.</span>
             </h2>
-            <div className="w-16 h-1 bg-[#c8830a] mb-6" />
+            <div className="w-16 h-1 bg-[#cc2020] mb-6" />
             <p className="text-gray-600 leading-relaxed mb-4">
               Die Manfred Hermanns Bauunternehmung GmbH steht für bodenständiges Handwerk,
               das hält was es verspricht. Seit der Gründung 2010 realisieren wir Bauprojekte
@@ -79,10 +79,10 @@ export default function About() {
               {facts.map((f) => (
                 <div
                   key={f.label}
-                  className="border-l-4 border-[#c8830a] bg-[#f0ede8] px-4 py-4"
+                  className="border-l-4 border-[#cc2020] bg-[#f0f4ff] px-4 py-4"
                 >
                   <div
-                    className="text-2xl font-bold text-[#1a1a1a]"
+                    className="text-2xl font-bold text-[#1a3a8a]"
                     style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
                   >
                     {f.value}

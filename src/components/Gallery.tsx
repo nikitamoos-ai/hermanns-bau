@@ -13,7 +13,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section id="galerie" className="py-24 bg-[#1a1a1a]">
+    <section id="galerie" className="py-24 bg-[#1a3a8a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -23,7 +23,7 @@ export default function Gallery() {
           className="mb-16"
         >
           <span
-            className="text-[#c8830a] font-bold uppercase tracking-widest text-sm"
+            className="text-[#cc2020] font-bold uppercase tracking-widest text-sm"
             style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
           >
             Einblicke
@@ -34,7 +34,7 @@ export default function Gallery() {
           >
             Unsere Projekte
           </h2>
-          <div className="w-16 h-1 bg-[#c8830a] mt-4" />
+          <div className="w-16 h-1 bg-[#cc2020] mt-4" />
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -54,7 +54,7 @@ export default function Gallery() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-[#1a1a1a]/0 group-hover:bg-[#1a1a1a]/50 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-[#1a3a8a]/0 group-hover:bg-[#1a3a8a]/50 transition-colors duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <span
                   className="text-white text-sm font-bold uppercase tracking-wide"

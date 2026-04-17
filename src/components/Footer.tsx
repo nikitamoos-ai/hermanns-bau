@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111111] text-gray-400 py-14">
+    <footer className="bg-[#122870] text-gray-400 py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
@@ -12,7 +12,7 @@ export default function Footer() {
             >
               Hermanns Bau
             </div>
-            <div className="text-[#c8830a] text-xs uppercase tracking-widest mb-4">Bauunternehmung GmbH</div>
+            <div className="text-[#cc2020] text-xs uppercase tracking-widest mb-4">Bauunternehmung GmbH</div>
             <p className="text-sm leading-relaxed">
               Kompetent, flexibel und kundennah –<br />
               Ihr Bauunternehmen in der Eifel.
@@ -27,9 +27,9 @@ export default function Footer() {
               Kontakt
             </h4>
             <ul className="space-y-2 text-sm">
-              <li>Sievertsstr. 25, 53937 Schleiden-Harperscheid</li>
+              <li>Dronkestraße 20, 53937 Schleiden</li>
               <li>
-                <a href="tel:024851246" className="hover:text-[#c8830a] transition-colors">
+                <a href="tel:024851246" className="hover:text-[#cc2020] transition-colors">
                   Tel: 02485 / 1246
                 </a>
               </li>
@@ -46,11 +46,11 @@ export default function Footer() {
               Links
             </h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#leistungen" className="hover:text-[#c8830a] transition-colors">Leistungen</a></li>
-              <li><a href="#ueber-uns" className="hover:text-[#c8830a] transition-colors">Über uns</a></li>
-              <li><a href="#kontakt" className="hover:text-[#c8830a] transition-colors">Kontakt</a></li>
-              <li><Link href="/impressum" className="hover:text-[#c8830a] transition-colors">Impressum</Link></li>
-              <li><Link href="/datenschutz" className="hover:text-[#c8830a] transition-colors">Datenschutz</Link></li>
+              <li><a href="#leistungen" className="hover:text-[#cc2020] transition-colors">Leistungen</a></li>
+              <li><a href="#ueber-uns" className="hover:text-[#cc2020] transition-colors">Über uns</a></li>
+              <li><a href="#kontakt" className="hover:text-[#cc2020] transition-colors">Kontakt</a></li>
+              <li><Link href="/impressum" className="hover:text-[#cc2020] transition-colors">Impressum</Link></li>
+              <li><Link href="/datenschutz" className="hover:text-[#cc2020] transition-colors">Datenschutz</Link></li>
             </ul>
           </div>
         </div>

@@ -77,7 +77,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="leistungen" className="py-24 bg-[#f0ede8]">
+    <section id="leistungen" className="py-24 bg-[#f0f4ff]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -86,17 +86,17 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <span className="text-[#c8830a] font-bold uppercase tracking-widest text-sm"
+          <span className="text-[#cc2020] font-bold uppercase tracking-widest text-sm"
             style={{ fontFamily: "var(--font-oswald, sans-serif)" }}>
             Was wir für Sie tun
           </span>
           <h2
-            className="text-4xl sm:text-5xl font-bold text-[#1a1a1a] mt-2 uppercase"
+            className="text-4xl sm:text-5xl font-bold text-[#1a3a8a] mt-2 uppercase"
             style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
           >
             Unsere Leistungen
           </h2>
-          <div className="w-16 h-1 bg-[#c8830a] mt-4" />
+          <div className="w-16 h-1 bg-[#cc2020] mt-4" />
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border border-gray-200">
@@ -107,13 +107,13 @@ export default function Services() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="bg-white p-8 border border-gray-200 group hover:bg-[#1a1a1a] transition-colors duration-300"
+              className="bg-white p-8 border border-gray-200 group hover:bg-[#1a3a8a] transition-colors duration-300"
             >
-              <div className="text-[#c8830a] group-hover:text-[#c8830a] mb-5">
+              <div className="text-[#cc2020] group-hover:text-[#cc2020] mb-5">
                 {s.icon}
               </div>
               <h3
-                className="text-lg font-bold text-[#1a1a1a] group-hover:text-white mb-3 uppercase tracking-wide transition-colors"
+                className="text-lg font-bold text-[#1a3a8a] group-hover:text-white mb-3 uppercase tracking-wide transition-colors"
                 style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
               >
                 {s.title}
@@ -134,7 +134,7 @@ export default function Services() {
         >
           <a
             href="tel:024851246"
-            className="inline-block bg-[#1a1a1a] hover:bg-[#c8830a] text-white font-bold px-10 py-4 text-lg uppercase tracking-wide transition-colors"
+            className="inline-block bg-[#1a3a8a] hover:bg-[#cc2020] text-white font-bold px-10 py-4 text-lg uppercase tracking-wide transition-colors"
             style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
           >
             Kostenloses Angebot: 02485 / 1246

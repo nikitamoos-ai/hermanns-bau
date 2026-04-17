@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #1a1a1a;
-  --accent: #c8830a;
-  --light: #f0ede8;
+  --primary: #1a3a8a;
+  --accent: #cc2020;
+  --light: #f0f4ff;
 }
 
 @theme inline {

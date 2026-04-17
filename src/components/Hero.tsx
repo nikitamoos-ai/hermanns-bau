@@ -13,7 +13,7 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a8a] via-[#1a3a8a]/60 to-transparent" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40">
@@ -22,7 +22,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 bg-[#c8830a] px-4 py-1.5 mb-6 text-sm text-white font-semibold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 bg-[#cc2020] px-4 py-1.5 mb-6 text-sm text-white font-semibold uppercase tracking-widest">
             <span>Meisterbetrieb · Seit 2010 in der Eifel</span>
           </div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
           >
             Wir bauen.
             <br />
-            <span className="text-[#c8830a]">Solide.</span>
+            <span className="text-[#cc2020]">Solide.</span>
             <br />
             Verlässlich.
           </h1>
@@ -45,7 +45,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <a
               href="tel:024851246"
-              className="bg-[#c8830a] hover:bg-[#a86c08] text-white font-bold px-8 py-4 text-lg uppercase tracking-wide transition-colors"
+              className="bg-[#cc2020] hover:bg-[#a81818] text-white font-bold px-8 py-4 text-lg uppercase tracking-wide transition-colors"
               style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
             >
               02485 / 1246 – Anrufen
@@ -65,7 +65,7 @@ export default function Hero() {
               { value: "500+", label: "Projekte" },
               { value: "GmbH", label: "Meisterbetrieb" },
             ].map((s) => (
-              <div key={s.label} className="border-l-2 border-[#c8830a] pl-4">
+              <div key={s.label} className="border-l-2 border-[#cc2020] pl-4">
                 <div
                   className="text-3xl font-bold text-white"
                   style={{ fontFamily: "var(--font-oswald, sans-serif)" }}

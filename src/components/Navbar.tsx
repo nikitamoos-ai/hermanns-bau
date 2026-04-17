@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#1a1a1a] shadow-xl" : "bg-transparent"
+        scrolled ? "bg-[#1a3a8a] shadow-xl" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
@@ -35,7 +35,7 @@ export default function Navbar() {
           >
             Hermanns Bau
           </span>
-          <span className="text-[10px] text-[#c8830a] uppercase tracking-widest">
+          <span className="text-[10px] text-[#cc2020] uppercase tracking-widest">
             Bauunternehmung GmbH
           </span>
         </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-xs text-gray-300 hover:text-[#c8830a] uppercase tracking-widest transition-colors"
+              className="text-xs text-gray-300 hover:text-[#cc2020] uppercase tracking-widest transition-colors"
               style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
             >
               {l.label}
@@ -53,7 +53,7 @@ export default function Navbar() {
           ))}
           <a
             href="tel:024851246"
-            className="ml-2 bg-[#c8830a] hover:bg-[#a86c08] text-white text-xs font-bold px-5 py-2.5 uppercase tracking-widest transition-colors"
+            className="ml-2 bg-[#cc2020] hover:bg-[#a81818] text-white text-xs font-bold px-5 py-2.5 uppercase tracking-widest transition-colors"
             style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
           >
             02485 / 1246
@@ -79,7 +79,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-[#1a1a1a] overflow-hidden"
+            className="md:hidden bg-[#1a3a8a] overflow-hidden"
           >
             <nav className="flex flex-col px-6 py-4 gap-4">
               {links.map((l) => (
@@ -87,7 +87,7 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-gray-300 hover:text-[#c8830a] uppercase tracking-widest text-sm transition-colors py-1 border-b border-gray-800"
+                  className="text-gray-300 hover:text-[#cc2020] uppercase tracking-widest text-sm transition-colors py-1 border-b border-gray-800"
                   style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
                 >
                   {l.label}
@@ -95,7 +95,7 @@ export default function Navbar() {
               ))}
               <a
                 href="tel:024851246"
-                className="bg-[#c8830a] text-white text-center font-bold px-4 py-3 uppercase tracking-widest mt-2"
+                className="bg-[#cc2020] text-white text-center font-bold px-4 py-3 uppercase tracking-widest mt-2"
                 style={{ fontFamily: "var(--font-oswald, sans-serif)" }}
               >
                 02485 / 1246
